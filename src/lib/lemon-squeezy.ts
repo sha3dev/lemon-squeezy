@@ -72,13 +72,13 @@ export default class LemonSqueezy {
       throw new Error(error || `error retrieving customer`);
     }
     const data = result?.body?.data?.[0];
-    if (data) {
-      return {
-        id: result?.body?.data?.[0]?.id,
-        ...result?.body?.data?.[0]?.attributes
-      };
+    if (!data) {
+      return null;
     }
-    throw new Error(`invalid customer response`);
+    return {
+      id: result?.body?.data?.[0]?.id,
+      ...result?.body?.data?.[0]?.attributes
+    };
   }
 
   public async getCustomerById(id: string) {
