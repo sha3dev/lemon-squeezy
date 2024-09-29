@@ -1,8 +1,13 @@
 {
   "name": "@sha3/lemon-squeezy",
   "version": "1.0.0",
-  "type": "module",
-  "main": "./src/index.ts",
+  "description": "Lemon Squeezy API wrapper",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "author": "Juan Carlos Viñas",
+  "license": "MIT",
+  "homepage": "https://github.com/sha3dev/lemon-squeezy#readme",
   "scripts": {
     "lint": "eslint 'src/**'",
     "test": "tsc --noEmit && node --loader tsx --test tests/*.test.ts",
@@ -24,5 +29,26 @@
     "tsx": "^4.7.1",
     "typescript": "^4.9.5",
     "typescript-eslint": "^8.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sha3dev/lemon-squeezy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sha3dev/lemon-squeezy/issues"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
