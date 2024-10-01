@@ -1,6 +1,6 @@
 {
   "name": "@sha3/lemon-squeezy",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Lemon Squeezy API wrapper",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
@@ -43,9 +43,9 @@
   ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "publishConfig": {
